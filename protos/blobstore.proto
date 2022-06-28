@@ -1,0 +1,106 @@
+
+syntax = "proto3";
+
+package blobstore;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+// Service for client server interface.
+service BlobStore {
+ // Read request sent by client to server.
+ rpc Read (ReadRequest) returns (ReadResponse) {}
+ // Write request sent by client to server. 
+ rpc Write(WriteRequest) returns (WriteResponse) {} 
+}
+
+message ReadRequest {
+  int64 address = 1;
+}
+
+message ReadResponse {
+  string status = 1;
+  string primary_ip = 2;
+  string data = 3;
+}
+
+message WriteRequest {
+  int64 address = 1;
+  string data = 2;
+}
+
+message WriteResponse {
+  string status = 1;
+  string primary_ip = 2;
+}
+
+
+service StoreInternal {
+
+ rpc Ping (PingRequest) returns (PingResponse) {} 
+
+ rpc Prepare (PrepareRequest) returns (PrepareResponse) {}
+
+ rpc Commit (CommitRequest) returns (CommitResponse) {}
+
+ rpc Recovery (RecoveryRequest) returns (RecoveryResponse) {}
+}
+
+message PingRequest {}
+
+message PingResponse {
+  string status = 1;
+}
+
+message PrepareRequest {
+  int64 txid = 1;
+  int64 address = 2;
+  string data = 3;  
+}
+
+message PrepareResponse {
+  string status = 1;
+}
+
+message CommitRequest {
+  int64 txid = 1;
+  int64 address = 2;
+}
+
+message CommitResponse {
+  string status = 1;
+}
+
+message RecoveryRequest {
+  repeated LogEntry entry = 1;
+}
+
+message LogEntry {
+  int64 txid = 1;
+  int64 address1 = 2;
+  int64 address2 = 3;
+  int64 status = 4;
+}
+
+message RecoveryRecord {
+  LogEntry entry = 1;
+  string data1 = 2;
+  string data2 = 3;
+}
+
+message RecoveryResponse {
+  repeated RecoveryRecord records = 1;
+}

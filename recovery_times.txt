@@ -1,0 +1,22 @@
+Recovery Times
+Initially
+
+Primary: 251 us
+Backup: 1 ms
+
+-> 50 k requests at both primary and secondary.
+-> After 50 k requests that were logged only at primary.
+
+Primary: 650 ms
+
+BackupPrepareLogs: 25 ms
+BackupSendLogsToPrimaryAndWaitForIt: 988
+BackupReplayTime: 1072 ms
+
+-> After Backup restore, the crash again and send 10k requests to primary
+Primary: 174 ms
+
+BackupPrepareLogs: 29 ms 
+BackupSendLogsToPrimaryAndWaitForIt: 266 ms 
+BackupReplayTime: 194 ms
+

@@ -1,0 +1,12 @@
+<!-- README -->
+
+1. Design & Implementation
+1.1 Replication Strategy: server/blob_server.cc [Prepare(), Commit(), PrepareLocal(), CommitLocal()]
+1.2 Durabiility: server/logger.cc [add_entry()]
+1.3 Crash Recovery Protocol: server/blob_server.cc [Recovery(), ReplayRecoveryRecords(), MergeAndRefreshLogsLocal(), CreateRecoveryResponse()]
+
+2. Testing & Measurement
+2.1 Correctness: client/client_test.cc [write_read_interleaved_clients(), logs/client_test_app.log, logs/client_test_verbos.log]
+2.2 Performance: client/client_perf.cc [all_functions]
+
+

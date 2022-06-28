@@ -1,0 +1,91 @@
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //client:client_test (0 packages loaded, 0 targets configured)
+INFO: Analyzed target //client:client_test (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Target //client:client_test up-to-date:
+  bazel-bin/client/client_test
+INFO: Elapsed time: 0.313s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/client/client_test /mnt/Work/CS739-P3/resources/exec.conf
+INFO: Build completed successfully, 1 total action
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ RUNNING CORRECTNESS TEST | CRASH TYPE: BACKUP_CRASH_AFTER_PRIMARY_PREPARE ============
+[ClientApp]:  Starting servers
+[ClientApp]:  Servers started.
+[ClientApp]:  Client 0: Running [write_read_interleaved]
+[ClientApp]:  Client 1: Running [write_read_interleaved]
+[ClientApp]:  Client 2: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Running [write_read_interleaved_with_crash: BACKUP_CRASH_AFTER_PRIMARY_PREPARE]
+[ClientApp]:  Client 4: Running [write_read_interleaved]
+[ClientApp]:  Client 5: Running [write_read_interleaved]
+[ClientApp]:  Client 6: Running [write_read_interleaved]
+[ClientApp]:  Client 7: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Running [write_read_interleaved]
+[ClientApp]:  Client 9: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Address used for crashing: -104099
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ RUNNING CORRECTNESS TEST | CRASH TYPE: PRIMARY_CRASH_AFTER_LOCAL_PREPARE ============
+[ClientApp]:  Starting servers
+[ClientApp]:  Servers started.
+[ClientApp]:  Client 0: Running [write_read_interleaved]
+[ClientApp]:  Client 1: Running [write_read_interleaved]
+[ClientApp]:  Client 2: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Running [write_read_interleaved]
+[ClientApp]:  Client 4: Running [write_read_interleaved]
+[ClientApp]:  Client 5: Running [write_read_interleaved]
+[ClientApp]:  Client 6: Running [write_read_interleaved]
+[ClientApp]:  Client 7: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Running [write_read_interleaved_with_crash: PRIMARY_CRASH_AFTER_LOCAL_PREPARE]
+[ClientApp]:  Client 9: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Address used for crashing: -216387
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ RUNNING CORRECTNESS TEST | CRASH TYPE: PRIMARY_CRASH_AFTER_LOCAL_COMMIT ============
+[ClientApp]:  Starting servers
+[ClientApp]:  Servers started.
+[ClientApp]:  Client 1: Running [write_read_interleaved]
+[ClientApp]:  Client 2: Running [write_read_interleaved]
+[ClientApp]:  Client 0: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Running [write_read_interleaved]
+[ClientApp]:  Client 4: Running [write_read_interleaved]
+[ClientApp]:  Client 5: Running [write_read_interleaved]
+[ClientApp]:  Client 6: Running [write_read_interleaved]
+[ClientApp]:  Client 7: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Running [write_read_interleaved]
+[ClientApp]:  Client 9: Running [write_read_interleaved_with_crash: PRIMARY_CRASH_AFTER_LOCAL_COMMIT]
+[ClientApp]:  Client 9: Address used for crashing: -328675
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ RUNNING CORRECTNESS TEST | CRASH TYPE: BACKUP_CRASH_AFTER_PRIMARY_COMMIT ============
+[ClientApp]:  Starting servers
+[ClientApp]:  Servers started.
+[ClientApp]:  Client 0: Running [write_read_interleaved]
+[ClientApp]:  Client 1: Running [write_read_interleaved]
+[ClientApp]:  Client 2: Running [write_read_interleaved]
+[ClientApp]:  Client 4: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Running [write_read_interleaved_with_crash: BACKUP_CRASH_AFTER_PRIMARY_COMMIT]
+[ClientApp]:  Client 5: Running [write_read_interleaved]
+[ClientApp]:  Client 6: Running [write_read_interleaved]
+[ClientApp]:  Client 7: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Running [write_read_interleaved]
+[ClientApp]:  Client 9: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Address used for crashing: -404099
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ RUNNING CORRECTNESS TEST | CRASH TYPE: PRIMARY_CRASH_BEFORE_READ ============
+[ClientApp]:  Starting servers
+[ClientApp]:  Servers started.
+[ClientApp]:  Client 0: Running [write_read_interleaved]
+[ClientApp]:  Client 1: Running [write_read_interleaved]
+[ClientApp]:  Client 2: Running [write_read_interleaved]
+[ClientApp]:  Client 3: Running [write_read_interleaved]
+[ClientApp]:  Client 4: Running [write_read_interleaved]
+[ClientApp]:  Client 5: Running [write_read_interleaved]
+[ClientApp]:  Client 6: Running [write_read_interleaved]
+[ClientApp]:  Client 7: Running [write_read_interleaved]
+[ClientApp]:  Client 8: Running [write_read_interleaved]
+[ClientApp]:  Client 9: Running [write_read_interleaved_with_crash: PRIMARY_CRASH_BEFORE_READ]
+[ClientApp]:  Client 9: Address used for crashing: -520483
+[ClientApp]:  Stopping servers
+[ClientApp]:  ============ TESTS COMPLETED ============
+Parsing config file: /mnt/Work/CS739-P3/resources/exec.conf

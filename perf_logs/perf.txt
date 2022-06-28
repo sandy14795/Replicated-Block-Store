@@ -1,0 +1,14 @@
+Coarse-grained locking
+Throughput: 796.62 requests/s
+
+Arena locking for Prepare:
+-Throughput: 1418.84 requests/s
+-Throughput: 1379.00 requests/s
+
+With -O3:
+Total time: 22607952.00 us
+Throughput: 2211.61 requests/s
+
+2-machine:
+Total time: 17075241.00 us
+Throughput: 2928.22 requests/s
