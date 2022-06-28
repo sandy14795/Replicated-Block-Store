@@ -1,3 +1,6 @@
+In this assignment, we implemented a Replicated Blob Store system using Primary/Backup replication. A two phase protocol was designed for consistency and log files for crash recovery. For correctness testing, we introduced deterministic crashes in the address space. We also implemented a hashing technique to compare the data for consistency tests. Finally, we evaluated our system on various parameters such as throughput and latency (with or without crash) and measured the recovery time.
+
+
 # Running
 ## Server
 ```sh
