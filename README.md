@@ -1,8 +1,3 @@
-# CS739-P3
-Dist Sys: P3
-
-
-
 # Running
 ## Server
 ```sh
